@@ -70,7 +70,7 @@ contract ex_12 {
     2. 하지만 detail addr을 호출한 것은 ex_12 라는 smart contract
     0x8059B0AE35c113137694Ba15b2C3585aE77Bb8E9
 
-    3. 그래서 ex_12_detail의 who는 ex_12 라는 smart contract
+    3. 그래서 ex_12_detail의 msg.sender는 ex_12 라는 smart contract
     ex_12를 호출한 것은 ACCOUNT 이지만,
     ex_12_detail을 호출한 것은 ex_12 smart contract
      */
