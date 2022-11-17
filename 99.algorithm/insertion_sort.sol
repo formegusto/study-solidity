@@ -6,19 +6,16 @@ contract insertion_sort {
     event show(uint256[] arr);
     event showNumber(uint256 num);
 
-    function sort(uint256[] memory arr) public payable {
+    function sort_test(uint256[] memory arr) public {
         emit show(arr);
 
         for (uint256 i = 1; i < arr.length; i++) {
-            uint256 prevI = i - 1;
-            while ((prevI >= 0) && (arr[prevI + 1] < arr[prevI])) {
-                if(prevI < 0) {
-                    emit showNumber(prevI);
-                    break;
-                }
-                uint256 tmp = arr[prevI + 1];
-                arr[prevI + 1] = arr[prevI];
-                arr[prevI--] = tmp;
+            int256 prevI = int(i - 1);
+            while ((prevI >= 0) && (arr[uint(prevI + 1)] < arr[uint(prevI)])) {
+                uint256 tmp = arr[uint(prevI + 1)];
+                arr[uint(prevI + 1)] = arr[uint(prevI)];
+                arr[uint(prevI)] = tmp;
+                prevI--;
             }
         }
 
